@@ -1,0 +1,10 @@
+D:\Documents\BIZAPPS\Mis\ODBC-DUSA\ODBCPesajePt\ODBCPesajePt\bin\Debug\ODBCPesajePt.exe
+D:\Documents\BIZAPPS\Mis\ODBC-DUSA\ODBCPesajePt\ODBCPesajePt\bin\Debug\ODBCPesajePt.pdb
+D:\Documents\BIZAPPS\Mis\ODBC-DUSA\ODBCPesajePt\ODBCPesajePt\bin\Debug\ODBCPesajePt.xml
+D:\Documents\BIZAPPS\Mis\ODBC-DUSA\ODBCPesajePt\ODBCPesajePt\obj\Debug\ResolveAssemblyReference.cache
+D:\Documents\BIZAPPS\Mis\ODBC-DUSA\ODBCPesajePt\ODBCPesajePt\obj\Debug\ODBCPesajePt.vbproj.ResolveComReference.cache
+D:\Documents\BIZAPPS\Mis\ODBC-DUSA\ODBCPesajePt\ODBCPesajePt\obj\Debug\ODBCPesajePt.Resources.resources
+D:\Documents\BIZAPPS\Mis\ODBC-DUSA\ODBCPesajePt\ODBCPesajePt\obj\Debug\ODBCPesajePt.vbproj.GenerateResource.Cache
+D:\Documents\BIZAPPS\Mis\ODBC-DUSA\ODBCPesajePt\ODBCPesajePt\obj\Debug\ODBCPesajePt.exe
+D:\Documents\BIZAPPS\Mis\ODBC-DUSA\ODBCPesajePt\ODBCPesajePt\obj\Debug\ODBCPesajePt.xml
+D:\Documents\BIZAPPS\Mis\ODBC-DUSA\ODBCPesajePt\ODBCPesajePt\obj\Debug\ODBCPesajePt.pdb
