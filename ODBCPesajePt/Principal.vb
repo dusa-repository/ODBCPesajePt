@@ -11,7 +11,8 @@ Module Principal
 
         cargar_parametros()
         'importarOrdenesProduccion()
-        importarLocalidades()
+        'importarLocalidades()
+        exportarPesajes()
     End Sub
 
     Public conexionString As String = ""
@@ -46,6 +47,8 @@ Module Principal
 
         Return SerialDate
     End Function
+
+
 
 
     Private Function existeOrden(ByVal wadoco As String, ByVal walitm As String, ByVal watrdj As String) As Boolean
@@ -111,9 +114,6 @@ Module Principal
     End Function
 
 
-
-
-
     Private Function existeLocalidad(ByVal lmlocn As String) As Boolean
 
         Dim existe As Boolean
@@ -145,6 +145,32 @@ Module Principal
         Return existe
     End Function
 
+    Private Sub insertInto400(ByVal sql As String)
+
+
+        Dim comando As New Odbc.OdbcCommand
+
+        Dim cnn400 As New Odbc.OdbcConnection(cadenaAS400_DTA)
+        cnn400.Open()
+
+        comando.Connection = cnn400
+        comando.CommandText = sql
+        comando.ExecuteNonQuery()
+
+        cnn400.Close()
+
+    End Sub
+
+    Private Sub exportarPesajes()
+
+        Dim sql As String
+        sql = "INSERT INTO F3111Z1 " & _
+              "(SZEDUS,SZEDBT,SZEDTN,SZEDLN,SZEDCT,SZTYTN,SZEDFT,SZEDDT,SZDRIN,SZEDDL,SZEDSP,SZPNID,SZTNAC,SZDOCO,SZDCTO,SZSFXO,SZTBM,SZFORQ,SZITC,SZCOBY,SZCOTY,SZCPNT,SZFRMP,SZTHRP,SZFRGD,SZTHGD,SZRKCO,SZRORN,SZRCTO,SZRLLN,SZOPSQ,SZBSEQ,SZRSCP,SZSCRP,SZREWP,SZASIP,SZCPYP,SZSTPP,SZLOVD,SZCPIT,SZCPIL,SZCPIA,SZCMCU,SZDSC1,SZDSC2,SZLOCN,SZLOTN,SZAN8,SZLNTY,SZSERN,SZTRDJ,SZDRQJ,SZUORG,SZTRQT,SZSOCN,SZSOBK,SZCTS1,SZQNTA,SZUM,SZEA,SZRTG,SZMTST,SZDCT,SZSHNO,SZMCU,SZOMCU,SZOBJ,SZSUB,SZCMRV,SZSTRX,SZPARS,SZCOMM,SZUKID,SZURCD,SZURDT,SZURAT,SZURAB,SZURRF,SZTORG,SZPOC,SZVEND,SZCTS4,SZCTS7,SZCTS8,SZUSER,SZPID,SZJOBN,SZUPMJ,SZTDAY,SZGLD,SZSBFL,SZAING,SZSSTQ,SZUOM2,SZAPSC,SZPSN,SZDLEJ,SZCOST,SZCHPP,SZCPNB,SZBSEQAN) " & _
+              "VALUES " & _
+              "('EDELGADO','271819','271819-1','1000','','JDEII','','115275','1','1','','','A','44969','WO','','M','V','I','','','0','0','0','','','','','','0','100','1','10000','0','0','0','0','0','0','0','','','','','','','','0','S','','0','0','0','0','0','0','0','0','','0','Y','','IC','','','','','','','0','605236','S','0','','0','0','0','','','0','0','0','0','0','EDELGADO','EP3111Z1','NTHTTP01VE','115275','124759','0','','0','0','','','0','0','','','0','')"
+
+        insertInto400(sql)
+    End Sub
 
     Private Sub importarOrdenesProduccion()
 
